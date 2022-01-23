@@ -1,0 +1,18 @@
+
+version: '3.3'
+
+services:
+  moodle-docker:
+    image: drajathasan/alpine-php74-moodle
+    container_name: "moodle-docker"
+    ports:
+      - 8800:80
+    volumes:
+      - ./app:/var/www/localhost/htdocs
+  moodle-docker-2:
+    image: drajathasan/alpine-php74-moodle
+    container_name: "moodle-docker-2"
+    ports:
+      - 8801:80
+    volumes:
+      - ./app:/var/www/localhost/htdocs
